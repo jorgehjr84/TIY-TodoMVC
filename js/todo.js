@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+//var expect = require('chai').expect;
 
 
 var taskList = [];
@@ -30,7 +30,7 @@ function editTask(position, newTask){
 addTaskToList.sort(function (taskList){
   return taskList[0,3,2,1,4,]
 }
-*/
+
 expect(taskList.length).to.equal(0);
 
 
@@ -72,7 +72,7 @@ function deleteTask(a,b) {
 
   };
 
-
+*/
 
 
 console.log(taskList);
