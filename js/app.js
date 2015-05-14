@@ -20,9 +20,12 @@
 				document.querySelector('input.new-todo').value = "";
 
 
-				var footerCount = document.querySelector('span.todo-count');
-				footerCount.textContent = todos.taskList.length;
-
+				if(todos.taskList.length === 1){
+				document.querySelector('span.todo-count').textContent = todos.taskList.length + ' Item Left';
+			}
+				else {
+				document.querySelector('span.todo-count').textContent = todos.taskList.length + ' Items Left';
+			};
 				console.log(todos.taskList);
 				console.log(todos.taskList.length);
 
