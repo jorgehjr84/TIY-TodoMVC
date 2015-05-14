@@ -12,9 +12,16 @@
 		//When the user types a task
 		newTodoInput.addEventListener('keyup', function addTodoController(event){
 			if ( event.keyCode === 13 ){ //AND presses the "Enter" key
-				console.log('Sanity Check!');
+
+				var task = document.querySelector('input.new-todo').value;
+				//todos.taskList.push(task);
+				console.log(task);
+
 
 			}
+
+
+
 			// THEN:
 			// TODO Save the thing to remember (task) to the list of things to remember (taskList)
 			// TODO Remove the thing to remember (task) from the "What needs to be done?" box (input.new-todo)
@@ -24,6 +31,13 @@
 	});
 
 })(window);
+
+
+
+
+
+
+
 
 
 /*
