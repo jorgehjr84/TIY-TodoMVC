@@ -15,10 +15,11 @@
 
 				var task = document.querySelector('input.new-todo').value;
 				//todos.taskList.push(task);
-				console.log(task);
+				todos.taskList.push(task);
+				console.log(todos.taskList);
 
 
-			}
+		}
 
 
 

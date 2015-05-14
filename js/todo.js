@@ -1,5 +1,5 @@
 (function (window){
-    var taskList = [];
+    var taskList = [ ];
 
     // I can list my tasks...
     function listTasks(list){
@@ -25,9 +25,11 @@
     }
 
     window.todos = {
+        "taskList": taskList,
         "addTaskToList": addTaskToList,
         "completeTask": completeTask,
         "deleteTask": deleteTask
+
     };
 
 })(window);
