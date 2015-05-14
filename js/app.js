@@ -12,9 +12,16 @@ document.head.parentElement.className = "js";
 var addTodo = document.querySelector('header');
 
 
-addTodo.addEventListener( '', function(){
+
+addTodo.addEventListener('click', function(){
 	console.log("Sup");
+	addTodo.parentElement.class.view;
+
 })
+
+
+}
+
 
 /*
 
