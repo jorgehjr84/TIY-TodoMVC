@@ -20,8 +20,11 @@
 				document.querySelector('input.new-todo').value = "";
 
 
-				
+				var footerCount = document.querySelector('span.todo-count');
+				footerCount.textContent = todos.taskList.length;
+
 				console.log(todos.taskList);
+				console.log(todos.taskList.length);
 
 
 		}
