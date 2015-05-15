@@ -29,18 +29,21 @@
 				console.log(todos.taskList);
 				console.log(todos.taskList.length);
 
+}
 
-		}
+		});
 
-		// function todoList(){
-		//
-		// 	var ul = document.getElementById('ul.todo-list');
-		// 	var li = document.createElement("li");
-		// 	li.appendChild(document.createTextNode(todos.taskList));
-		// 	ul.appendChild(li);
-		// 	document.querySelector('ul.todo-list').textContent = todos.taskList;
-		// }
-		todos.addTaskToList = document.querySelector('ul.todo-list > li').textContent = todos.taskList;
+
+		var deleteTask = document.querySelector('ul.todo-list')
+		//When the user types a task
+		deleteTask.addEventListener('mouseover', function (){
+
+			console.log("Hello");
+});
+
+
+
+		//todos.addTaskToList = document.querySelector('ul.todo-list > li').textContent = todos.taskList;
 
 
 
@@ -50,7 +53,30 @@
 			// TODO Update the number of tasks in the footer...
 			// TODO Add a new task (ul.todo-list > li) to the list of tasks _in the display_ (ul.todo-list)
 
-	});
+			// CONTROLLER FOR: I can delete a task from my list...
+			    // 1. What event should I be listening for?    MouseOver,Click
+			    // 2. What element makes sense to listen for that event?
+			    // 3. What do I need to do when that event fires?
+
+			    // CONTROLLER FOR: I can edit a task on my list...
+			    // 1. What event should I be listening for?
+			    // 2. What element makes sense to listen for that event?
+			    // 3. What do I need to do when that event fires?
+
+
+			    // CONTROLLER FOR: I can complete a task on my list...
+			    // 1. What event should I be listening for?
+			    // 2. What element makes sense to listen for that event?
+			    // 3. What do I need to do when that event fires?
+
+			    // CONTROLLER FOR: I can view the list...
+			    // 1. What event should I be listening for?
+			    // 2. What element makes sense to listen for that event?
+			    // 3. What do I need to do when that event fires?
+
+
+
+
 
 })(window);
 
