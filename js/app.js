@@ -1,36 +1,51 @@
 (function(window) { //IIFE: Immediately Invoked Function Expression
   'use strict';
+
+
   //I can add a task to my list...
   // Questions
   //1. What event should I be listening for?keydn,keyup,keypress
   //2. What element makes sense to listen for that event? input.new-todo
   //3. What do I need to do when that event fires?
-
   //Given an HTML element  <input class = "new-todo">
   var newTodoInput = document.querySelector('input.new-todo')
 
   //When the user types a task
   newTodoInput.addEventListener('keyup', function addTodoController(event) {
-    if (event.keyCode === 13) { //AND presses the "Enter" key
+    if (event.keyCode !== 13) return; // didn't press the "Enter" key!
 
-      var task = document.querySelector('input.new-todo').value;
-      //todos.taskList.push(task);
-      todos.taskList.push(task);
+    var task = newTodoInput.value,
+      todoCountElement = document.querySelector('span.todo-count');
 
-      document.querySelector('input.new-todo').value = "";
+    todos.addTaskToList(task, todos.taskList);
 
+    newTodoInput.value = "";
 
+    // Footer Counter
+    { // FIXME Refactor into function...
+      var todoCountText = todos.taskList.length + ' Item';
       if (todos.taskList.length === 1) {
-        document.querySelector('span.todo-count').textContent = todos.taskList.length + ' Item Left';
+        // todoCountText = todoCountText + ' Left';
+        todoCountText += ' Left';
       } else {
-        document.querySelector('span.todo-count').textContent = todos.taskList.length + ' Items Left';
+        // todoCountText = todoCountText + 's Left';
+        todoCountText += 's Left';
       };
-      console.log(todos.taskList);
-      console.log(todos.taskList.length);
+    } // END BLOCK
 
-    }
+    todoCountElement.text = todoCountText;
 
-  });
+    // TODO Add a <li> representation of `task`...
+    document.querySelector('ul.todo-list').innerHTML += (
+      "<li> Hello clarise: " + task +
+      "</li>"
+    )
+
+    console.log(todos.taskList);
+    console.log(todos.taskList.length);
+
+  }); // END addTodoController
+
 
   //1. What event should I be listening for?'mouseOver', 'click'
   //2. What element makes sense to listen for that event? ul.todo-list
@@ -39,16 +54,12 @@
 
   // var deleteTask = document.querySelector('ul.todo-list')
   // deleteTask.addEventListener('mouseover', function() {
-	//
+  //
   //   console.log("Hello");
   // });
 
-  var deleteButtons = document.querySelectorAll('button.destroy');
-  var deleteTaskButton = document.querySelector('button.destroy')
-  deleteTaskButton.addEventListener('click', function() {
 
-    console.log("Click Works");
-  });
+  var deleteButtons = document.querySelectorAll('button.destroy');
 
   _.forEach(deleteButtons, function(element, index, deleteButtons) {
     element.addEventListener('click', function() {
@@ -56,17 +67,43 @@
 
     });
 
+
+    document.querySelector('todos-list???')
+
+
+    // CONTROLLER FOR: I can DELETE a task from my list...
+    // 1. What event should I be listening for? Click on the 'X'
+    // 2. What element makes sense to listen for that event?
+    // 3. What do I need to do when that event fires? Item needs to be removed from
+    // Delete Task from Where it is saved
+    // Needs to delete the field/li that the todo-list lives on
+    // Updating Footer Number(should be auto), but if 0 should remove footer all together.
+
+
+
+
+
+
+
+
+
   });
 
   var editTask = document.querySelectorAll('li');
 
-	_.forEach(editTask, function(element,index, editTask){
-		element.addEventListener('dblclick', function(){
-			console.log("Sup");
+  _.forEach(editTask, function(element, index, editTask) {
+    element.addEventListener('dblclick', function() {
+      console.log("Sup");
 
-});
+    });
 
   });
+
+
+
+
+
+
 
 
 
