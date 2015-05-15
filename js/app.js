@@ -32,6 +32,16 @@
 
 		}
 
+		// function todoList(){
+		//
+		// 	var ul = document.getElementById('ul.todo-list');
+		// 	var li = document.createElement("li");
+		// 	li.appendChild(document.createTextNode(todos.taskList));
+		// 	ul.appendChild(li);
+		// 	document.querySelector('ul.todo-list').textContent = todos.taskList;
+		// }
+		todos.addTaskToList = document.querySelector('ul.todo-list > li').textContent = todos.taskList;
+
 
 
 			// THEN:
