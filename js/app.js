@@ -22,22 +22,25 @@
     newTodoInput.value = "";
 
     // Footer Counter
-    { // FIXME Refactor into function...
-      var todoCountText = todos.taskList.length + ' Item';
-      if (todos.taskList.length === 1) {
-        // todoCountText = todoCountText + ' Left';
-        todoCountText += ' Left';
-      } else {
-        // todoCountText = todoCountText + 's Left';
-        todoCountText += 's Left';
-      };
-    } // END BLOCK
+     // FIXME Refactor into function...
 
-    todoCountElement.text = todoCountText;
+			todos.footerCounter(todoCountElement);
+
+		  // var todoCountText = todos.taskList.length + ' Item';
+      // if (todos.taskList.length === 1) {
+      //   // todoCountText = todoCountText + ' Left';
+      //   todoCountText += ' Left';
+      // } else {
+      //   // todoCountText = todoCountText + 's Left';
+      //   todoCountText += 's Left';
+      // };
+     // END BLOCK
+
+    todoCountElement.text = todoCountElement;
 
     // TODO Add a <li> representation of `task`...
     document.querySelector('ul.todo-list').innerHTML += (
-			"<li><div><input class='toggle' type='checkbox'><label>" + task + "</label><button class='destroy'></input class='toggle' type='checkbox'></div></li>")
+			"<li><div><input class='toggle' type='checkbox'><label>" + task + "</label><button class='destroy'</input class='toggle' type='checkbox'></div></li>")
       //"<li>" <div class='view'> + task + </div>
       //"</li>"
 
