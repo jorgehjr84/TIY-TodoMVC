@@ -12,7 +12,7 @@
 	var todoCountElement = document.querySelector('span.todo-count')
   //When the user types a task
   newTodoInput.addEventListener('keyup', function addTodoController(event) {
-    if (event.keyCode !== 13) return; // didn't press the "Enter" key!
+    if (event.keyCode !== 13 || newTodoInput.value == "") return; // didn't press the "Enter" key!
 
 
     var task = newTodoInput.value;
