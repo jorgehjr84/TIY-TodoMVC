@@ -41,18 +41,6 @@
     // TODO Add a <li> representation of `task`...
     document.querySelector('ul.todo-list').innerHTML += (
 			"<li><div><input class='toggle' type='checkbox'><label>" + task + "</label><button class='destroy'</input class='toggle' type='checkbox'></div></li>")
-      //"<li>" <div class='view'> + task + </div>
-      //"</li>"
-
-
-    	// '<li data-id="{{id}}" class="{{completed}}">'
-			// '<div class="view"> + task + </div>'
-			// '<input class="toggle" type="checkbox" {{checked}}>'
-			// 'button class="destroy"></button'
-			// '</div>'
-			// '</li>';
-
-
 
 
   }); // END addTodoController
