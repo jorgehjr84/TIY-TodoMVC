@@ -9,13 +9,13 @@
   //3. What do I need to do when that event fires?
   //Given an HTML element  <input class = "new-todo">
   var newTodoInput = document.querySelector('input.new-todo')
-
+	var todoCountElement = document.querySelector('span.todo-count')
   //When the user types a task
   newTodoInput.addEventListener('keyup', function addTodoController(event) {
     if (event.keyCode !== 13) return; // didn't press the "Enter" key!
 
-    var task = newTodoInput.value,
-      todoCountElement = document.querySelector('span.todo-count');
+
+    var task = newTodoInput.value;
 
     todos.addTaskToList(task, todos.taskList);
 
@@ -37,12 +37,20 @@
 
     // TODO Add a <li> representation of `task`...
     document.querySelector('ul.todo-list').innerHTML += (
-      "<li> Hello clarise: " + task +
-      "</li>"
-    )
+			"<li><div><input class='toggle' type='checkbox'><label>" + task + "</label><button class='destroy'></input class='toggle' type='checkbox'></div></li>")
+      //"<li>" <div class='view'> + task + </div>
+      //"</li>"
 
-    console.log(todos.taskList);
-    console.log(todos.taskList.length);
+
+    	// '<li data-id="{{id}}" class="{{completed}}">'
+			// '<div class="view"> + task + </div>'
+			// '<input class="toggle" type="checkbox" {{checked}}>'
+			// 'button class="destroy"></button'
+			// '</div>'
+			// '</li>';
+
+
+
 
   }); // END addTodoController
 
@@ -68,7 +76,6 @@
     });
 
 
-    document.querySelector('todos-list???')
 
 
     // CONTROLLER FOR: I can DELETE a task from my list...
