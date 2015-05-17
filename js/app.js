@@ -46,9 +46,22 @@
   }); // END addTodoController
 
 
+
+//I can delete Task From My list
   //1. What event should I be listening for?'mouseOver', 'click'
-  //2. What element makes sense to listen for that event? ul.todo-list
+  //2. What element makes sense to listen for that event? class destroy?
   //3. What do I need to do when that event fires?
+  //Task needs to be removed from list
+  //Task needs to be removed from array
+  //Footer needs to update with new task list count
+
+
+  var deleteInput = document.querySelector('.destroy');
+
+    deleteInput.addEventListener('click', function() {
+      return console.log('Deleted');
+
+    });
 
 
   // var deleteTask = document.querySelector('ul.todo-list')
@@ -58,13 +71,13 @@
   // });
 
 
-  var deleteButtons = document.querySelectorAll('button.destroy');
+  // var deleteButtons = document.querySelectorAll('button.destroy');
+  //
+  // _.forEach(deleteButtons, function(element, index, deleteButtons) {
+  //   element.addEventListener('click', function() {
+  //     console.log("This works for all of the buttons!!");
 
-  _.forEach(deleteButtons, function(element, index, deleteButtons) {
-    element.addEventListener('click', function() {
-      console.log("This works for all of the buttons!!");
-
-    });
+    //});
 
 
 
@@ -82,21 +95,21 @@
 
 
 
-
-
-
-  });
-
-  var editTask = document.querySelectorAll('li');
-
-  _.forEach(editTask, function(element, index, editTask) {
-    element.addEventListener('dblclick', function() {
-      console.log("Sup");
-
-    });
-
-  });
-
+  //
+  //
+  //
+  // });
+  //
+  // var editTask = document.querySelectorAll('li');
+  //
+  // _.forEach(editTask, function(element, index, editTask) {
+  //   element.addEventListener('dblclick', function() {
+  //     console.log("Sup");
+  //
+  //   });
+  //
+  // });
+  //
 
 
 
