@@ -15,7 +15,7 @@
     if (event.keyCode !== 13 || newTodoInput.value == "") return; // didn't press the "Enter" key!
 
 
-    var task = newTodoInput.value;
+    var task = newTodoInput.value;//could use newTodoInput.reset()
 
     todos.addTaskToList(task, todos.taskList);
 
@@ -56,12 +56,22 @@
   //Footer needs to update with new task list count
 
 
-  var deleteInput = document.querySelector('.destroy');
+  // var deleteInput = document.querySelector('.destroy');
+  //
+  //   deleteInput.addEventListener('click', function() {
+  //     return console.log('Deleted');
+  //
+  //   });
+  //
+    var list = document.querySelector('ul.todo-list');
+    var deleteTaskButton = document.querySelectorAll('button.destroy');
 
-    deleteInput.addEventListener('click', function() {
-      return console.log('Deleted');
-
-    });
+  _.forEach(list, function(element){
+    element.addEventListener('click', function(event){
+      if (event.target.tagName === "BUTTON" && event.target.className === "destroy");
+      console.log('delete works', event.target );
+    })
+  });
 
 
   // var deleteTask = document.querySelector('ul.todo-list')
