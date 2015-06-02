@@ -8,6 +8,6 @@
   "scripts": {
     "test": "browser-sync start --server --files='js/**/*.js,test/spec/**/*.js' --startPath test/index.html",
     "start": "browser-sync start --server --files='index.html, css/,js/*.js'"
-  },
+  }
 
 }
