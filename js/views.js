@@ -8,6 +8,9 @@
 
 
 
+  window.todosViews = { // Revealing module pattern
 
+
+    } //End Revealing module pattern
 
 })(window);

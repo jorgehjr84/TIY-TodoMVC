@@ -8,11 +8,15 @@
   //DELETE:I can delete a task from my taskList so that I forget it.
   //EDIT:I can edit a task on my taskList so that I can correct mistakes.
   //READ: I can view all the tasks in my taskList
-  function
 
 
 
 
 
+  window.todos = { //Revealing module pattern
+
+
+
+  }
 
 })(window);
